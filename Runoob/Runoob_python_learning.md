@@ -8,19 +8,15 @@
 
   -  Within `[]`, `{}`, `()` , no need to use `\`.
 
-- There are four types of numbers : `int`, `bool`, `float`, `complex`.
-
 - `''` and `""` are the same.
 
 - Triple quotes `'''` or `"""` can be used to specify a multiline string.
 
+  - Use `;` to separate sentences in one line, like `a = 0; b = 0`
+
 - `\` can be used for escaping, and using `r` prevents the backslash from being interpreted as an escape character.
 
-  ```python
-  r"this is a line with \n" 
-  ```
-
-  - The output would be `this is a line with \n`.
+  - For example :`print(r"this is a line with \n")` output would be `this is a line with \n`.
 
 - Strings can be concatenated using `+` and repeated using `*`.
 
@@ -50,3 +46,26 @@
   - To import a single function from a module : `from somemodule import somefunction`
   - To import several functions from a module : `from somemodule import func1, func2, func3`
   - To import all functions in a module : `from somemodule import *`
+
+### Basic data type
+
+- **Variables themselves are untyped**, the type we speak of belongs to the object in memory, not the variable.
+  - We can use `type()` to check the type of the variable.
+- Allows multiple variable assignment at once, such as `a = b = c = 1` or `a, b, c = 1, 2, "runoob"`.
+- There are 6 standard data types in Python 3 : Number, String, Bool (sometimes as part of int), List, Tuple, Set, Dictionary
+  - Unchangable data type : Number, String, Bool, Tuple
+  - Changable data type : List, Set, Dictionary
+
+#### Number
+
+- There are four types of numbers : `int`, `bool`, `float`, `complex`.
+  - We can use `type()` to check the type, such as `print(type(a))`.
+  - We can also use `isinstance()` to check, such as `isinstance(a, int)`, it will answer `True` or `False`.
+  - The difference is that, `type()` doesn't recognize subclass relationships, but `isinstance()` does.
+    - This is beyond what we've covered.
+- There is only one integer type `int`, which is represented as a long integer.
+- A variable can point to objects of different types through assignment.
+- In mixed-type calculations, `int` is automatically converted to `float`.
+- **`/` returns a float**, while `//` returns an integer (**floor** division).
+- A complex number can be represented as `a + bj` or `complex(a, b)`.
+  - Both the real part `a` and the imaginary part `b` are `float`.
